@@ -44,6 +44,114 @@
         </div>
     {{- end -}}
 
+    {{- if .Site.Params.homepageSubscribeForm -}}
+    <style type="text/css">
+    
+    section.signup {
+        text-align: center;
+        padding-bottom: 3.375rem;
+    }
+
+    .signup-container {
+        max-width: 1200px;
+        margin: 0px auto;
+    }
+
+    .signup-container h3 {
+        line-height: 1.42;
+        color: rgb(8, 35, 51);
+        font-size: 28px;
+        margin: 0px 0px 32px;
+    }
+
+    .signup-container *.spacer {
+        width: 0px;
+        height: 12px;
+        pointer-events: none;
+    }
+
+    form.signup {
+        max-width: 620px;
+        margin: 0px auto;
+    }
+
+    form.signup .inputgroup {
+        --inner-height: 40px;
+        width: 100%;
+        display: inline-flex;
+        -webkit-box-align: center;
+        align-items: center;
+        padding: 12px;
+        background: rgb(239, 243, 245);
+        border-radius: 6px;
+    }
+
+    form.signup input[type=email] {
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+        height: var(--inner-height);
+        color: rgb(12, 52, 75);
+        font-size: 20px;
+        vertical-align: middle;
+        background: none;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        outline: none;
+    }
+
+    form.signup button.signup {
+        display: inline-flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: unset;
+        justify-content: unset;
+        height: 40px;
+        font-size: 16px;
+        padding-right: 16px;
+        padding-left: 16px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        white-space: nowrap;
+        word-break: keep-all;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        user-select: none;
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        outline: none;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        transition: color 150ms ease 0s, background 150ms ease 0s, transform 100ms ease 0s;
+        background: rgb(12, 52, 75);
+    }
+    </style>
+    <section class="signup">
+        <div class="signup-container">
+            <h3>Don’t miss the next post!</h3>
+            <div class="spacer"></div>
+            <form class="signup" action="https://boldprogrammer.us17.list-manage.com/subscribe/post?u=cf97c55264eeef69288168608&amp;id=b41c6f92a7" method="post"
+                    id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div class="inputgroup">
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cf97c55264eeef69288168608_b41c6f92a7" tabindex="-1" value=""></div>
+                    <button class="signup">
+                        <span>Follow</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    {{- end -}}
+
     <!-- Articles -->
     <div class="articles row row-cols-1 row-cols-lg-3">
         {{ range after 1 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
