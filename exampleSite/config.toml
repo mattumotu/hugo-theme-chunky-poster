@@ -34,7 +34,7 @@ author = "authors"
   homepageImage = "/images/homepage-image.jpg"
   share = true
   showLanguageSwitcher = false
-    homepageSubscribeForm = true #true to include mailchimp form
+  homepageSubscribeForm = true #true to include mailchimp form
 
   # Custom CSS and JS. Relative to /static/css and /static/js respectively.
   customCSS = []
