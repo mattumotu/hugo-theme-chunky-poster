@@ -45,22 +45,7 @@
     {{- end -}}
 
     {{- if .Site.Params.homepageSubscribeForm -}}
-    <section class="signup">
-        <div class="signup-container">
-            <h3>Don’t miss the next post!</h3>
-            <div class="spacer"></div>
-            <form class="signup" action="https://boldprogrammer.us17.list-manage.com/subscribe/post?u=cf97c55264eeef69288168608&amp;id=b41c6f92a7" method="post"
-                    id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div class="inputgroup">
-                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cf97c55264eeef69288168608_b41c6f92a7" tabindex="-1" value=""></div>
-                    <button class="signup">
-                        <span>Follow</span>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </section>
+    {{ partial "signup.html" }}
     {{- end -}}
 
     <!-- Articles -->
