@@ -35,6 +35,7 @@ author = "authors"
   share = true
   showLanguageSwitcher = false
   homepageSubscribeForm = true #true to include mailchimp form
+  postSubscribeForm = false #true to include mailchimp form on post
 
   # Custom CSS and JS. Relative to /static/css and /static/js respectively.
   customCSS = []

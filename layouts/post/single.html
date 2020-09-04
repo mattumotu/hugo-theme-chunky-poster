@@ -52,6 +52,10 @@
                     </div>
                 </div>
 
+                {{- if .Site.Params.postSubscribeForm -}}
+                {{ partial "signup.html" }}
+                {{- end -}}
+
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         {{ template "_internal/disqus.html" . }}
